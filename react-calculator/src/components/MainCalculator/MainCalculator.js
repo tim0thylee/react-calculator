@@ -40,7 +40,9 @@ class MainCalculator extends Component {
 
     calculateOperations () {
         let results = this.state.operations.join("")
-        if(results.indexOf("%")){
+
+
+        if(results.includes("%")){
             let modCalculator = results.split("%");
             let equals = math.mod(modCalculator[0], modCalculator[1]);
             this.setState({totalCalculation: equals})
